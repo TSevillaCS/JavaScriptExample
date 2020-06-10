@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<title> Web Page with JavaScript </title>
+
+<script>
+function VerifyName(NameString)
+{
+	if(NameString == "")
+	return false
+}
+
+IllegalChar = "/, :;[]"
+
+for (i=0; i<= 6; i++)
+{
+	aBadChar = BadChars.charAt(i)
+	if(Namestring.indexOf(aBadChar,0) >=0)
+	{
+	return false
+	}
+}
+
+function SubmitForm(form)
+{
+	if (!VerifyName(form.name.value))
+	{
+		alert("Ha-ha! Invalid name. Please input again!")
+		form.name.focus()
+		form.name.select()
+		return false
+	}
+	return true
+}
+</script>
+</head>
+
+<FORM onSubmit = "return VerifyForm(this)"
+	ACTION="mailto:MyEmail@U.edu" METHOD = POST>
+	
+	Your Name: <br>
+	
+	<INPUT type=text NAME = "name" SIZE = 50> <br>
+	
+	Your Request: <br>
+	
+	<INPUT type = TEXT NAME = "request" SIZE = 100> <br>
+	
+	<INPUT type = SUBMIT VALUE = "submit information">
+	
+	<INPUT TYPE = reset value = "reset the form">
+	
+</form>
+	
+<body>
+<h3>SEND YOUR INFORMATION!</h3>
+</body>
+
+</html>
